@@ -21,7 +21,6 @@ header p {
   font-size: 1.2rem;
 }
 
-/* Search Bar */
 .search-bar {
   text-align: center;
   margin: 20px;
@@ -36,7 +35,7 @@ header p {
   border: 1px solid #ccc;
 }
 
-/* Product Cards */
+/* Products Section */
 .products {
   display: flex;
   flex-wrap: wrap;
@@ -54,8 +53,6 @@ header p {
   text-align: center;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   background-color: white;
-  text-decoration: none;
-  color: black;
   transition: transform 0.2s;
 }
 
@@ -69,6 +66,23 @@ header p {
   border-radius: 10px;
 }
 
+/* WhatsApp Button */
+.order-btn {
+  margin-top: 10px;
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #25D366;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.order-btn:hover {
+  background-color: #1ebe5b;
+}
+
 /* Footer */
 footer {
   background-color: #222;
@@ -78,7 +92,7 @@ footer {
   margin-top: 40px;
 }
 
-/* Mobile Responsive */
+/* Responsive */
 @media (max-width: 600px) {
   .products {
     flex-direction: column;
