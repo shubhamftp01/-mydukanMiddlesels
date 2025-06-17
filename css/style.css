@@ -1,4 +1,3 @@
-/* General Body Styling */
 body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
@@ -6,7 +5,6 @@ body {
   background-color: #f9f9f9;
 }
 
-/* Header */
 header {
   background-color: #cc0000;
   color: white;
@@ -23,7 +21,22 @@ header p {
   font-size: 1.2rem;
 }
 
-/* Product Section */
+/* Search Bar */
+.search-bar {
+  text-align: center;
+  margin: 20px;
+}
+
+.search-bar input {
+  padding: 10px;
+  width: 80%;
+  max-width: 400px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Product Cards */
 .products {
   display: flex;
   flex-wrap: wrap;
@@ -33,8 +46,7 @@ header p {
   background-color: #fff;
 }
 
-/* Individual Product Card */
-a.product {
+.product {
   border: 1px solid #ccc;
   border-radius: 10px;
   width: 260px;
@@ -42,16 +54,16 @@ a.product {
   text-align: center;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   background-color: white;
-  transition: transform 0.2s;
-  color: inherit;
   text-decoration: none;
+  color: black;
+  transition: transform 0.2s;
 }
 
-a.product:hover {
+.product:hover {
   transform: scale(1.03);
 }
 
-a.product img {
+.product img {
   width: 100%;
   height: auto;
   border-radius: 10px;
@@ -64,4 +76,16 @@ footer {
   text-align: center;
   padding: 15px;
   margin-top: 40px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+  .products {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .search-bar input {
+    width: 95%;
+  }
 }
