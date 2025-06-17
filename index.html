@@ -4,32 +4,53 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Middle Sels – Paint & Shirt</title>
+  <meta name="description" content="Middle Sels – Stylish Shirts & Quality Paints at ₹200 only. Order now on WhatsApp.">
+  <meta name="keywords" content="Paint, Shirt, Middle Sels, ₹200, WhatsApp Order">
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
 </head>
 <body>
   <header>
     <h1>Middle Sels</h1>
-    <p>Stylish Shirts & Quality Paints</p>
+    <p>Stylish Shirts & Quality Paints at ₹200 only</p>
   </header>
 
+  <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Search products...">
+  </div>
+
   <section class="products">
-    <div class="product">
+    <!-- Paint Product -->
+    <a href="https://wa.me/91XXXXXXXXXX?text=Hi%2C%20I%20want%20to%20order%20Red%20Wall%20Paint%0ASize%3A%201L" class="product">
       <img src="images/paint1.jpg" alt="Red Wall Paint">
       <h2>Red Wall Paint</h2>
-      <p>₹200 per pices</p>
-      <a class="order-btn" href="https://wa.me/91XXXXXXXXXX?text=Hi%2C%20I%20want%20to%20order%20Red%20Wall%20Paint.">Order on WhatsApp</a>
-    </div>
+      <p>₹200</p>
+    </a>
 
-    <div class="product">
+    <!-- Shirt Product -->
+    <a href="https://wa.me/91XXXXXXXXXX?text=Hi%2C%20I%20want%20to%20order%20Casual%20Blue%20Shirt%0ASize%3A%20M" class="product">
       <img src="images/shirt1.jpg" alt="Casual Blue Shirt">
       <h2>Casual Blue Shirt</h2>
-      <p>₹200 par pices</p>
-      <a class="order-btn" href="https://wa.me/919044528469?text=Hi%2C%20I%20want%20to%20order%20Casual%20Blue%20Shirt.">Order on WhatsApp</a>
-    </div>
+      <p>₹200</p>
+    </a>
+
+    <!-- Add More Products Here in Same Format -->
   </section>
 
   <footer>
     <p>© 2025 Middle Sels. All rights reserved.</p>
   </footer>
+
+  <script>
+    const searchInput = document.getElementById("searchInput");
+    searchInput.addEventListener("keyup", function () {
+      const filter = searchInput.value.toLowerCase();
+      const products = document.querySelectorAll(".product");
+      products.forEach(product => {
+        const text = product.textContent.toLowerCase();
+        product.style.display = text.includes(filter) ? "block" : "none";
+      });
+    });
+  </script>
 </body>
 </html>
